@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>My Picture Gallery</title>
+</head>
+
+<body>
+    
+    <h1 style="font-size: 45px; letter-spacing: 20px;">My Picture Gallery</h1>
+    <div class="grid-container">
+
+        <div class="movies-heading">
+            <h1>Movies</h1>
+        </div>
+
+
+        <div class="movies-container">
+            <img src="Images/Movie/1.png" id="m1" alt="" class="movie-img">
+            <img src="Images/Movie/2.png" id="m2" alt="" class="movie-img">
+            <img src="Images/Movie/3.png" id="m3" alt="" class="movie-img">
+            <img src="Images/Movie/4.png" id="m4" alt="" class="movie-img">
+            <img src="Images/Movie/5.png" id="m5" alt="" class="movie-img">
+            <img src="Images/Movie/6.png" id="m6" alt="" class="movie-img">
+            <img src="Images/Movie/7.png" id="m7" alt="" class="movie-img">
+            <img src="Images/Movie/8.png" id="m8" alt="" class="movie-img">
+            <img src="Images/Movie/9.png" id="m9" alt="" class="movie-img">
+            <button id="btn2" onClick="Random_gen1()"><h2>Random Gen</h2></button>
+            
+        </div>
+
+
+        <div class="fav-heading">
+            <h1>Favourite Peronalities</h1>
+        </div>
+
+        <div class="fav-container">
+            <img src="Images/Famous/1.png" id = "f1" alt="" class="fav-img">
+            <img src="Images/Famous/2.png" id = "f2" alt="" class="fav-img">
+            <img src="Images/Famous/3.png" id = "f3" alt="" class="fav-img">
+            <img src="Images/Famous/4.png" id = "f4" alt="" class="fav-img">
+            <img src="Images/Famous/5.png" id = "f5" alt="" class="fav-img">
+            <img src="Images/Famous/6.png" id = "f6" alt="" class="fav-img">
+            <img src="Images/Famous/7.png" id = "f7" alt="" class="fav-img">
+            <img src="Images/Famous/8.png" id = "f8" alt="" class="fav-img">
+            <img src="Images/Famous/9.png" id = "f9" alt="" class="fav-img">
+            <img src="Images/Famous/10.png" id = "f10" alt="" class="fav-img">
+            <img src="Images/Famous/11.png" id = "f11" alt="" class="fav-img">
+            <img src="Images/Famous/12.png" id = "f12" alt="" class="fav-img">
+            <img src="Images/Famous/13.png" id = "f13" alt="" class="fav-img">
+            <img src="Images/Famous/14.png" id = "f14" alt="" class="fav-img">
+            <img src="Images/Famous/15.png" id = "f15" alt="" class="fav-img">
+            <button id="btn2" onClick="Random_gen2()"><h2>Random Gen</h2></button>
+            
+
+        </div>
+
+        <div class="utilities-heading">
+            <h1>Utilities</h1>
+        </div>
+
+        <div class="utilities-container">
+            <div class="bmi">
+                <h2>BMI Calculator</h2>
+                <label for="h">Height</label><br>
+                <input type="text" placeholder="Weight in kg" required id="h">
+                <br>
+                <label for="w">Weight</label><br>
+                <input type="text" placeholder="Height in feet" required id="w">
+                <p id="result_bmi"></p>
+                <button id="btn" onClick="BMI()">Calculate</button><br>
+                <small>A healthy BMI ranges between 19 and 25</small>
+            </div>
+
+            <div class="zodiac">
+                <h2>Zodiac Sign Finder</h2>
+                <label for="day">Day</label><br>
+                <input type="number" placeholder="Day in number" id="day">
+                <br>
+                <label for="month">Month</label><br>
+                <input type="number" placeholder="Month in number" id="month">
+                <p id="result_zodiac"></p>
+                <button id="btn" onClick="Zodiac()">Find</button>
+            </div>
+        </div>
+
+        <div class="details-heading">
+            <h1>Contact Me</h1>
+        </div>
+        <div class="details-container">
+            <img src="Images/Contacts.jpg" alt="" height="140px" style="border-radius: 70px;">
+            <p><strong>Name - </strong>Swagat Panda</p> 
+            <p><strong>Regn no - </strong>201800523</p>
+            <p><strong>Email - </strong> <a href="mailto:swagatp99@gmail.com" style="text-decoration: none; color: aqua;"> swagatp99@gmail.com</a></p>
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript">
+        function BMI() {
+            var h = document.getElementById('h').value;
+            var w = document.getElementById('w').value;
+            h = h * 12 * 0.025; // height converted in meter 
+            var bmi = w / (h * h);
+            var bmio = (bmi.toFixed(2));
+
+            document.getElementById("result_bmi").innerHTML = "Your BMI is " + bmio;
+        }
+
+        function Zodiac(params) {
+            var d = document.getElementById('day').value;
+            var m = document.getElementById('month').value;
+            var s; // result sign
+
+            m = Number(m);
+            d = Number(d);
+
+            switch (m) {
+                case 1:
+                    if (d >= 20 && d <= 31)
+                        s = "Aquarius";
+                    else if (d >= 1 && d <= 19)
+                        s = "Capricorn";
+                    break;
+                case 2:
+                    if (d >= 1 && d <= 18)
+                        s = "Aquarius";
+                    else if (d >= 19 && d <= 29)
+                        s = "Pisces";
+                    break;
+                case 3:
+                    if (d >= 1 && d <= 20)
+                        s = "Pisces";
+                    else if (d >= 21 && d <= 31)
+                        s = "Aries";
+                    break;
+                case 4:
+                    if (d >= 1 && d <= 19)
+                        s = "Aries";
+                    else if (d >= 20 && d <= 30)
+                        s = "Taurus";
+                    break;
+                case 5:
+                    if (d >= 1 && d <= 20)
+                        s = "Taurus";
+                    else if (d >= 21 && d <= 31)
+                        s = "Gemini";
+                    break;
+                case 6:
+                    if (d >= 1 && d <= 20)
+                        s = "Gemini";
+                    else if (d >= 21 && d <= 30)
+                        s = "Cancer";
+                    break;
+                case 7:
+                    if (d >= 1 && d <= 22)
+                        s = "Cancer";
+                    else if (d >= 23 && d <= 31)
+                        s = "Leo";
+                    break;
+                case 8:
+                    if (d >= 1 && d <= 22)
+                        s = "Leo";
+                    else if (d >= 23 && d <= 31)
+                        s = "Virgo";
+                    break;
+                case 9:
+                    if (d >= 1 && d <= 22)
+                        s = "Virgo";
+                    else if (d >= 23 && d <= 30)
+                        s = "Libra";
+                    break;
+                case 10:
+                    if (d >= 1 && d <= 22)
+                        s = "Libra";
+                    else if (d >= 23 && d <= 31)
+                        s = "Scorpio";
+                    break;
+                case 11:
+                    if (d >= 1 && d <= 21)
+                        s = "Scorpio";
+                    else if (d >= 22 && d <= 30)
+                        s = "Sagittarius";
+                    break;
+                case 12:
+                    if (d >= 1 && d <= 21)
+                        s = "Sagittarius";
+                    else if (d >= 22 && d <= 31)
+                        s = "Capricorn";
+                    break;
+                default:
+                    s = 0;
+            }
+            
+            if (s == 0)
+                document.getElementById("result_zodiac").innerHTML = "Invalid Input, Please Try Again";
+            else
+                document.getElementById("result_zodiac").innerHTML = "Your Zodiac Sign is " + s;
+        }
+
+
+        function Random_gen1(){
+            var random;
+            var contents = new Array();
+            var orderArray = new Array();
+
+            contents[0] = document.getElementById("m1");
+            contents[1] = document.getElementById("m2");
+            contents[2] = document.getElementById("m3");
+            contents[3] = document.getElementById("m4");
+            contents[4] = document.getElementById("m5");
+            contents[5] = document.getElementById("m6");
+            contents[6] = document.getElementById("m7");
+            contents[7] = document.getElementById("m8");
+            contents[8] = document.getElementById("m9");
+
+            function checkMe(x) {
+                return (x == random);
+            }
+
+            while(orderArray.length != contents.length){
+                random = Math.floor(Math.random() * contents.length) + 1;
+                if(orderArray.find(checkMe) == undefined)
+                    orderArray.push(random);
+            }
+
+            for(j = 0; j < orderArray.length; j++)
+            {
+                contents[j].src = "Images/Movie/" + orderArray[j] + ".png";
+                console.log(orderArray);
+            }
+        }
+
+        function Random_gen2() {
+            var random;
+            var contents = new Array();
+            var orderArray = new Array();
+
+            contents[0] = document.getElementById("f1");
+            contents[1] = document.getElementById("f2");
+            contents[2] = document.getElementById("f3");
+            contents[3] = document.getElementById("f4");
+            contents[4] = document.getElementById("f5");
+            contents[5] = document.getElementById("f6");
+            contents[6] = document.getElementById("f7");
+            contents[7] = document.getElementById("f8");
+            contents[8] = document.getElementById("f9");
+            contents[9] = document.getElementById("f10");
+            contents[10] = document.getElementById("f11");
+            contents[11] = document.getElementById("f12");
+            contents[12] = document.getElementById("f13");
+            contents[13] = document.getElementById("f14");
+            contents[14] = document.getElementById("f15");
+        
+            function checkMe(x) {
+                return (x == random);
+            }
+
+            while (orderArray.length != contents.length) {
+                random = Math.floor(Math.random() * contents.length) + 1;
+                if (orderArray.find(checkMe) == undefined)
+                    orderArray.push(random);
+            }
+
+            for (j = 0; j < orderArray.length; j++) {
+                contents[j].src = "Images/Famous/" + orderArray[j] + ".png";
+                console.log(orderArray);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

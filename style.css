@@ -1,0 +1,272 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(#4637b0), to(#e43659));
+  background: linear-gradient(to right, #4637b0, #e43659);
+  color: white;
+}
+
+h1 {
+  letter-spacing: 10px;
+}
+
+h2 {
+  font-family: dubai;
+  color: white;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.movies-heading {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 1/1/span 1/span 3;
+  background-color: rgba(85, 18, 24, 0.342);
+}
+
+.movies-container {
+  padding: 10px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2/1/auto/span 3;
+  background-color: rgba(0, 0, 0, 0.52);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.fav-heading {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 3/1/span 1/span 3;
+  background-color: rgba(85, 18, 24, 0.342);
+}
+
+.fav-container {
+  padding: 10px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 4/1/auto/span 3;
+  background-color: rgba(0, 0, 0, 0.52);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 130px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 130px));
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.details-heading {
+  background-color: rgba(85, 18, 24, 0.342);
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 5/1/span 1/span 4;
+}
+
+.details-container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 6/2/auto/span 2;
+  padding: 10px;
+}
+
+.utilities-heading {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 1/4/span 1/span 1;
+  background-color: rgba(38, 18, 85, 0.473);
+}
+
+.utilities-container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: 2/4/span 3/span 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+.bmi {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/span 1/span 1;
+  background-color: rgba(38, 18, 85, 0.473);
+}
+
+.zodiac {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2/1/span 1/span 1;
+  background-color: rgba(38, 18, 85, 0.473);
+}
+
+.movie-img {
+  width: 100%;
+}
+
+.fav-img {
+  width: 100%;
+}
+
+input {
+  background-color: white;
+  border-radius: 20px;
+  border-width: 0;
+  padding: 8px;
+  margin: 10px;
+  width: 150px;
+}
+
+#btn {
+  background-color: #EA4265;
+  border-width: 0;
+  color: white;
+  border-radius: 20px;
+  border-width: 0;
+  padding: 8px;
+  margin: 10px;
+  width: 80px;
+}
+
+#btn2 {
+  background-color: rgba(234, 66, 100, 0.548);
+  border-width: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .movies-heading {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 1/1/span 1/span 4;
+    background-color: rgba(85, 18, 24, 0.342);
+  }
+  .movies-container {
+    padding: 10px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 2/1/auto/span 4;
+    background-color: rgba(0, 0, 0, 0.52);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .fav-heading {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 3/1/span 1/span 4;
+    background-color: rgba(85, 18, 24, 0.342);
+  }
+  .fav-container {
+    padding: 10px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 4/1/auto/span 4;
+    background-color: rgba(0, 0, 0, 0.52);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(80px, 130px))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(80px, 130px));
+    grid-gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .details-heading {
+    background-color: rgba(85, 18, 24, 0.342);
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 7/1/span 1/span 4;
+  }
+  .details-container {
+    background-color: rgba(38, 18, 85, 0.473);
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 8/1/auto/span 4;
+  }
+  .utilities-heading {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 5/1/span 1/span 4;
+    background-color: rgba(85, 18, 24, 0.342);
+  }
+  .utilities-container {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 6/1/auto/span 4;
+    padding: 2px;
+  }
+  .movie-img {
+    width: 100%;
+  }
+  .fav-img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
